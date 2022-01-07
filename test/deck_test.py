@@ -3,7 +3,7 @@ from lib.card import *
 from lib.deck import *
 
 
-def test_it_exists():
+def test_it_exists(): #Testing that the deck of cards exist
     card1 = Card("heart", "King", 13)
     card2 = Card("spade", "King", 13)
     card3 = Card("club", "King", 13)
@@ -12,7 +12,7 @@ def test_it_exists():
     deck = Deck(cards)
     assert len(deck.cards) == 3
 
-def test_rank_of_card_at():
+def test_rank_of_card_at(): #Testing the rank of a card in the deck
     card1 = Card("heart", "King", 13)
     card2 = Card("spade", "5", 5)
     card3 = Card("club", "8", 8)
