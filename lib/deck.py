@@ -36,10 +36,10 @@ class Deck:
             / len(self.cards)\
             * 100
 
-    def remove_card(self):
+    def remove_card(self): # remove card from deck
         return self.cards.pop(0)
 
-    def add_card(self, card):
+    def add_card(self, card): # Add card to deck
         self.cards.append(card)
 
 # import ipdb; ipdb.set_trace() <---- this is similar to Ruby's binding.pry for debugging

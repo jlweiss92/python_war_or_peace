@@ -59,7 +59,7 @@ def test_percent_high_ranking(): # Testing to see the percentage of high ranking
     no_high_rank = Deck(different_cards)
     assert no_high_rank.percent_high_ranking() == 0 # Tests that if no cards are high ranking that it returns a 0
 
-def test_it_can_remove_a_card():
+def test_it_can_remove_a_card(): # Test to remove a card from a deck
     card1 = Card("heart", "King", 13)
     card2 = Card("spade", "5", 5)
     card3 = Card("club", "8", 8)
@@ -71,7 +71,7 @@ def test_it_can_remove_a_card():
     deck.remove_card()
     assert len(deck.cards) == 3
 
-def test_it_can_add_a_card():
+def test_it_can_add_a_card(): # Test to add a card to a deck
     card1 = Card("heart", "King", 13)
     card2 = Card("spade", "5", 5)
     card3 = Card("club", "8", 8)
@@ -83,6 +83,6 @@ def test_it_can_add_a_card():
     assert cards == [card1, card2, card3]
 
     deck.add_card(card4)
-    
+
     assert len(deck.cards) == 4
     assert cards == [card1, card2, card3, card4]
