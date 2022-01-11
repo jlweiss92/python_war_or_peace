@@ -39,6 +39,7 @@ class Deck:
     def remove_card(self):
         return self.cards.pop(0)
 
-
+    def add_card(self, card):
+        self.cards.append(card)
 
 # import ipdb; ipdb.set_trace() <---- this is similar to Ruby's binding.pry for debugging
