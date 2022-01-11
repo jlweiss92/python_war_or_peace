@@ -26,3 +26,15 @@ def test_rank_of_card_at(): #Testing the rank of a card in the deck
     assert deck.rank_of_card_at(1) == 5
     assert deck.rank_of_card_at(2) == 8
     assert empty_deck.rank_of_card_at(0) == 0
+
+def test_high_ranking_cards(): # Testing for cards in a deck that rank above 10
+    card1 = Card("heart", "King", 13)
+    card2 = Card("spade", "5", 5)
+    card3 = Card("club", "8", 8)
+    card4 = Card("diamond", "Queen", 12)
+    cards = [card1, card2, card3, card4]
+    deck = Deck(cards)
+
+    assert deck.high_ranking_cards()[0] == card1
+    assert deck.high_ranking_cards()[1] == card4
+    assert len(deck.high_ranking_cards()) == 2
