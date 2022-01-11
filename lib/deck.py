@@ -28,8 +28,13 @@ class Deck:
         #high_ranked_cards
     #end
 
-
-
+    def percent_high_ranking(self): # Checking in a deck the percentage of cards that are high ranking cards (above 10)
+        if len(self.high_ranking_cards()) == 0:
+             return 0 # edge case for if there are no cards
+        else:
+            return len(self.high_ranking_cards())\
+            / len(self.cards)\
+            * 100
 
 
 
