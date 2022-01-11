@@ -70,3 +70,19 @@ def test_it_can_remove_a_card():
     assert len(deck.cards) == 4
     deck.remove_card()
     assert len(deck.cards) == 3
+
+def test_it_can_add_a_card():
+    card1 = Card("heart", "King", 13)
+    card2 = Card("spade", "5", 5)
+    card3 = Card("club", "8", 8)
+    card4 = Card("diamond", "Queen", 12)
+    cards = [card1, card2, card3]
+    deck = Deck(cards)
+
+    assert len(deck.cards) == 3
+    assert cards == [card1, card2, card3]
+
+    deck.add_card(card4)
+    
+    assert len(deck.cards) == 4
+    assert cards == [card1, card2, card3, card4]
