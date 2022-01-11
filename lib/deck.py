@@ -36,6 +36,8 @@ class Deck:
             / len(self.cards)\
             * 100
 
+    def remove_card(self):
+        return self.cards.pop(0)
 
 
 
